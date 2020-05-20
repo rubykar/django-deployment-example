@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% extends 'demoapp/Dashboard.html' %}
+{%load static%}
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Teccstart</title>
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="{%static "ADMINLTE/plugins/jsgrid/jsgrid.min.css" %}">
+  <link rel="stylesheet" href="{%static "ADMINLTE/plugins/jsgrid/jsgrid-theme.min.css" %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="{%static "ADMINLTE/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" %}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{%static "ADMINLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css" %}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{%static "ADMINLTE/plugins/jqvmap/jqvmap.min.css"  %}">
+  <!-- Favicon-->
+  <link rel="icon" type="image/png" href="static/landing_page/js/logo.png"   />
+  <title>Teecstart</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{%static "ADMINLTE/plugins/fontawesome-free/css/all.min.css" %}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{%static "ADMINLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{%static "ADMINLTE/dist/css/adminlte.min.css" %}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+   <!-- Daterange picker -->
+   <link rel="stylesheet" href="{%static "ADMINLTE/plugins/daterangepicker/daterangepicker.css" %}">
+   <!-- summernote -->
+   <link rel="stylesheet" href="{%static "ADMINLTE/plugins/summernote/summernote-bs4.css" %}">
+</head>
+<body>
+  {%block body_block%}
+  <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">CPU Traffic</span>
+                <span class="info-box-number">
+                  10
+                  <small>%</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Likes</span>
+                <span class="info-box-number">41,410</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Sales</span>
+                <span class="info-box-number">760</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">New Members</span>
+                <span class="info-box-number">2,000</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+{% block client_block %}
+
+<a href="{%url 'demoapp:client_form' %}" class="btn btn-primary" >Add Clients</a>
+{% endblock %}
+
+
+  
+
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="{%static "ADMINLTE/plugins/jquery/jquery.min.js" %}"></script>
+<!-- Bootstrap -->
+<script src="{%static "ADMINLTE/ADMINLTE/plugins/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+<!-- overlayScrollbars -->
+<script src="{%static "ADMINLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js" %}"></script>
+<!-- AdminLTE App -->
+<script src="{%static "ADMINLTE/dist/js/adminlte.js" %}"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="{%static "ADMINLTE/dist/js/demo.js" %}"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="{%static "ADMINLTE/plugins/jquery-mousewheel/jquery.mousewheel.js" %}"></script>
+<script src="{%static "ADMINLTE/plugins/raphael/raphael.min.js" %}"></script>
+<script src="{%static "ADMINLTE/plugins/jquery-mapael/jquery.mapael.min.js" %}"></script>
+<script src="{%static "ADMINLTE/plugins/jquery-mapael/maps/usa_states.min.js" %}"></script>
+<!-- ChartJS -->
+<script src="{%static "ADMINLTE/plugins/chart.js/Chart.min.js" %}"></script>
+
+<!-- PAGE SCRIPTS -->
+<script src={%static "ADMINLTE/dist/js/pages/dashboard2.js" %}"></script> 
+{% endblock %}
+</div>
+</body>
+</html>
